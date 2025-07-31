@@ -1,0 +1,168 @@
+/* --- Importación de Fuente --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* --- Tipografía y Enlaces --- */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #1a237e; /* Un azul oscuro profesional */
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #007bff;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* --- Secciones Principales --- */
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.contact-info a {
+    margin: 0 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+/* --- Sección de Experiencia --- */
+.job {
+    margin-bottom: 20px;
+}
+.job-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.job-title span {
+    font-weight: normal;
+    font-style: italic;
+    color: #666;
+}
+.job ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* --- Sección de Habilidades --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.skill-category h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skill-category li {
+    background: #eef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición para efecto hover */
+}
+
+.skill-category li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: default;
+}
+
+/* Estilo para los iconos de Font Awesome */
+.skill-category li i {
+    margin-right: 8px;
+    color: #007bff;
+    width: 15px; /* Alinea los iconos */
+    text-align: center;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+
+
+/* --- Diseño Responsivo para Móviles --- */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .contact-info a {
+        display: block;
+        margin: 8px 0;
+    }
+    .contact-info span {
+         display: block;
+         margin: 8px 0;
+    }
+}
