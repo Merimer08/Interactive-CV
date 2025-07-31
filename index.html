@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - María López Luengo</title>
+    <style>
+        /* --- General Styles --- */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Headings & Text --- */
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 5px;
+            color: #1a237e; /* Un azul oscuro profesional */
+        }
+
+        h2 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #007bff;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* --- Header / Contact Info --- */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        .contact-info a {
+            margin: 0 10px;
+        }
+
+        /* --- Sections --- */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* --- Experience Section --- */
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .job-title span {
+            font-weight: normal;
+            font-style: italic;
+            color: #666;
+        }
+        .job ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        /* --- Skills Section --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-category h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-category li {
+            background: #eef;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MARÍA LÓPEZ LUENGO</h1>
+            <h2>Desarrolladora Web Junior</h2>
+            <div class="contact-info">
+                <a href="mailto:marialolu08@gmail.com">marialolu08@gmail.com</a> |
+                <span>687 14 72 73</span> |
+                <span>Zaragoza, Aragón</span> |
+                <a href="https://linkedin.com/in/marialolu/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/TU-USUARIO" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <h3>RESUMEN PROFESIONAL</h3>
+                <p>
+                    Soy una desarrolladora web junior apasionada por la resolución de problemas y la creación de soluciones tecnológicas. Mi transición al desarrollo de software nace de mi vocación por la lógica y la construcción de productos digitales funcionales, convirtiendo ideas en código real. Mi experiencia previa en roles de alta presión me ha dotado de una mentalidad analítica y una gran resiliencia, habilidades que ahora aplico para entregar código de alta calidad.
+                </p>
+            </section>
+
+            <section class="section">
+                <h3>HABILIDADES TÉCNICAS</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <ul>
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <ul>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Bases de Datos y Herramientas</h4>
+                        <ul>
+                            <li>MySQL / phpMyAdmin</li>
+                            <li>Git / GitHub</li>
+                            <li>VS Code</li>
+                            <li>WordPress</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>PROYECTOS DESTACADOS</h3>
+                <div class="job">
+                    <p class="job-title"><strong>Check-In Garage - Sistema de Gestión para Talleres (SaaS)</strong></p>
+                    <p><strong>Descripción:</strong> Desarrollé una aplicación web completa con Laravel para la gestión integral de talleres mecánicos, optimizando el ciclo de vida de las reparaciones.</p>
+                    <p><strong>Características Clave:</strong> Implementé un sistema de autenticación Multi-Guard con una matriz de autorización detallada (Policies y Gates). Programé el flujo completo de gestión de vehículos, incluyendo subida de archivos y captura de firma digital.</p>
+                    <p><strong>Tecnologías:</strong> Laravel, PHP, MySQL, JavaScript, Blade.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>EXPERIENCIA PROFESIONAL</h3>
+                <div class="job">
+                    <div class="job-title"><strong>Desarrolladora Web</strong> | Cantinred <span>Mayo 2024 - Actualidad</span></div>
+                    <p>Responsable del desarrollo full-stack del proyecto "Check-In Garage".</p>
+                    <ul>
+                        <li><strong>Arquitectura y Seguridad:</strong> Implementé una arquitectura MVC con autenticación Multi-Guard y Policies/Gates. Apliqué las mejores prácticas de Laravel contra vulnerabilidades.</li>
+                        <li><strong>Core Funcional:</strong> Desarrollé el ciclo completo de gestión de vehículos: check-in, seguimiento de reparaciones y check-out con firma digital.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <div class="job-title"><strong>Operadora de Emergencias</strong> | Gobierno de Aragón (112 Aragón) <span>Junio 2020 - Septiembre 2021</span></div>
+                    <p>Gestioné incidencias críticas en tiempo real, desarrollando una alta capacidad para la resolución de problemas bajo presión, habilidad clave para el debugging en desarrollo.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>EDUCACIÓN Y CERTIFICACIONES</h3>
+                 <div class="job">
+                    <div class="job-title"><strong>Certificado de Profesionalidad: Desarrollo de Aplicaciones Web</strong><span>2024</span></div>
+                    <p><em>(Nombre del Centro de Formación)</em></p>
+                    <p>Formación intensiva en desarrollo full-stack (PHP, Laravel, MySQL, React, JavaScript, HTML/CSS, WordPress).</p>
+                </div>
+                <div class="job">
+                    <div class="job-title"><strong>Grado Superior en Enseñanza y Animación Sociodeportiva</strong><span>2022</span></div>
+                    <p><em>CPA Salduie (Grupo San Valero)</em></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
