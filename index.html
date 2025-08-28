@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Interactivo | María López Luengo</title>
-    <meta name="description" content="CV interactivo de María López Luengo, Desarrolladora Web Junior. Explora mis habilidades, experiencia y proyectos en una experiencia visual y dinámica.">
-    <meta name="keywords" content="CV, Currículum, Desarrolladora Web, Junior, María López Luengo, Habilidades, Proyectos, Experiencia, HTML, CSS, JavaScript, Laravel, PHP, MySQL">
-    <meta name="author" content="María López Luengo">
-    <link rel="stylesheet" href="./css/style.css">
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="./public/img/ML.ico">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = { darkMode: 'class' };
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Interactivo | María López Luengo</title>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Serene Professional -->
-    <!-- Application Structure Plan: He diseñado una estructura de SPA temática y no lineal para transformar el CV estático en una experiencia de exploración. Comienza con un resumen, seguido de secciones interactivas como un gráfico de habilidades y una línea de tiempo de carrera. Esta arquitectura permite a los reclutadores acceder rápidamente a la información más relevante (habilidades, experiencia) de una manera visualmente atractiva, en lugar de leer un documento de arriba a abajo. El flujo está pensado para destacar la transición profesional y las competencias técnicas de forma inmediata. -->
-    <!-- Visualization & Content Choices: Resumen -> Meta: Informar -> Bloque de texto -> Interacción: Ninguna -> Justificación: Presentación clara y directa. | Habilidades -> Meta: Comparar -> Gráfico de barras horizontales (Chart.js) -> Interacción: Tooltips al pasar el ratón -> Justificación: Ofrece una evaluación visual rápida de las fortalezas técnicas, más impactante que una lista. | Experiencia/Educación -> Meta: Mostrar cambio -> Línea de tiempo vertical (HTML/Tailwind) -> Interacción: Scroll -> Justificación: Narra la historia de la carrera y la transición al desarrollo de forma cronológica y visual. | Proyectos -> Meta: Organizar -> Tarjetas en rejilla -> Interacción: Hover para ver detalles (futura mejora), enlaces directos -> Justificación: Formato estándar y fácil de escanear para mostrar trabajos. | Idiomas -> Meta: Informar -> Barras de progreso (HTML/Tailwind) -> Interacción: Ninguna -> Justificación: Representación visual simple de la fluidez. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-    
+  <!-- Meta SEO -->
+  <meta name="description" content="CV interactivo de María López Luengo, Desarrolladora Web Junior. Explora mis habilidades, experiencia y proyectos en una experiencia visual y dinámica.">
+  <meta name="keywords" content="CV, Currículum, Desarrolladora Web, Junior, María López Luengo, Habilidades, Proyectos, Experiencia, HTML, CSS, JavaScript, Laravel, PHP, MySQL">
+  <meta name="author" content="María López Luengo">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CV Interactivo | María López Luengo">
+  <meta property="og:description" content="Explora el CV interactivo de María López Luengo, Desarrolladora Web Junior. Habilidades, proyectos y trayectoria en un formato visual y dinámico.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://merimer08.github.io/Interactive-CV/">
+  <meta property="og:image" content="https://merimer08.github.io/Interactive-CV/ML.png">
+  <meta property="og:site_name" content="CV Interactivo | María López Luengo">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./ML.ico">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
 
