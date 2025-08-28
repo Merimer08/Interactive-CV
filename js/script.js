@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             themeToggleLightIcon.classList.add('hidden');
         }
     }
-
+// Initial theme setup segun el pc que use
     if (localStorage.getItem('color-theme') === 'dark' || 
        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         applyTheme('dark');

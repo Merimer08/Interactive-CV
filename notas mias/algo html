@@ -1,0 +1,142 @@
+✅ ¿Qué puedes hacer entonces?
+OPCIÓN 1: Separar Frontend y Backend
+🔹 Frontend (tu CV App) → GitHub Pages
+Hecho con HTML/CSS o React/Vite
+
+Carga datos desde una API
+
+🔹 Backend (Laravel API) → Desplegado en:
+Render (fácil, gratuito y moderno)
+
+Railway
+
+[Heroku](ya no tiene plan gratuito oficial, pero sigue siendo viable)
+
+💡 Puedes tener tu API en https://api.maria-cv.com y tu frontend en https://merimer08.github.io, comunicándose por fetch/Axios.
+
+OPCIÓN 2: Todo dentro de Laravel, pero desplegado en un hosting compatible
+En vez de GitHub Pages:
+
+Usa Render para desplegar Laravel completo
+
+O bien un VPS como DigitalOcean
+
+O un hosting tradicional con soporte PHP (como Hostinger, si quieres algo fácil)
+
+En ese caso, tu CV sería una app Laravel “monolítica” con:
+
+Vistas Blade
+
+Componentes dinámicos
+
+Base de datos y rutas protegidas
+
+🧪 ¿Cuál te conviene como junior?
+💡 Mi recomendación:
+👉 Frontend en GitHub Pages para tu CV visual interactivo
+👉 Laravel API aparte si quieres demostrar tu habilidad backend
+
+Así mantienes todo modular, limpio, fácil de mantener y demostrás que sabes montar una app desacoplada y profesional.
+
+🚀 ¿Te gustaría que preparemos ahora mismo ese MVP?
+Podemos hacer:
+
+JSON con tus datos simulando la API
+
+Frontend bonito en HTML/JS que lo consuma
+
+Y luego montamos la API Laravel real
+
+¿Te parece ese plan?
+
+
+
+
+
+
+
+Tú dijiste:
+me parece genial. opcion 1. Definamos el MVP ahora
+
+
+ChatGPT Plus
+¡Excelente decisión, María!
+Vamos a construir tu CV interactivo como App real, usando la opción 1:
+Frontend en GitHub Pages (estático) + API Laravel (desplegable en Render/Railway).
+
+🧪 MVP de tu CV como App real
+🎯 Meta: una app que cargue tu información desde una API (simulada primero, real después), con diseño moderno, datos organizados y funcionalidades interactivas.
+
+✅ 1. Funcionalidades esenciales del MVP
+Función	Qué demuestra
+Carga de datos desde JSON/API	Fetch/Axios, asincronía, separación de lógica
+Secciones dinámicas (experiencia, proyectos, etc.)	Reutilización de componentes/plantillas
+Diseño responsivo y elegante	Maquetación, CSS moderno (Tailwind o propio)
+Modo claro/oscuro (toggle)	Manejo de estado y UX
+Botón "Descargar CV PDF"	Uso de librerías JS externas (html2pdf.js)
+Formulario de contacto (fake)	Validación JS, estructura de formulario
+
+🧱 2. Estructura de secciones
+Header
+
+Logo pequeño + Nombre + Rol + Enlaces rápidos (email, GitHub, LinkedIn)
+
+Resumen profesional
+
+Texto breve cargado desde JSON
+
+Habilidades técnicas
+
+Agrupadas por categoría: Backend, Frontend, Herramientas
+
+Proyectos
+
+Tarjetas dinámicas con nombre, descripción, tecnologías y enlaces
+
+Experiencia profesional
+
+Timeline con cargo, empresa, fechas y logros
+
+Educación y Certificaciones
+
+Lista con títulos, centro y fecha
+
+Contacto
+
+Formulario con validación (nombre, email, mensaje)
+
+🔄 3. Flujo de datos en el MVP
+Toda la información (resumen, skills, proyectos, etc.) vendrá desde un archivo cv-data.json (luego lo sustituiremos por la API Laravel)
+
+El frontend (HTML/JS) consume los datos dinámicamente y los muestra
+
+Puedes editar fácilmente el JSON sin tocar el HTML
+
+🎨 4. Tecnologías para el MVP
+Parte	Herramienta
+Frontend	HTML + CSS o Tailwind + JS (o Vite si te animas)
+Backend (luego)	Laravel (rutas tipo /api/cv/experiencia)
+Despliegue	GitHub Pages para frontend, Render para API
+
+🚀 5. Siguientes pasos
+Paso 1: Crear los archivos base
+index.html
+
+styles.css
+
+script.js (para hacer fetch y renderizar)
+
+cv-data.json (con todos tus datos)
+
+Paso 2: Renderizar sección por sección desde el JSON
+Cargar los datos desde JS
+
+Mostrar experiencia, proyectos, etc.
+
+Paso 3: Añadir funcionalidades extra
+Botón para PDF
+
+Modo oscuro
+
+Contacto
+
