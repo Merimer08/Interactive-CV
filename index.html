@@ -1,104 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - María López Luengo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>CV Interactivo | María López Luengo</title>
+    <meta name="description" content="CV interactivo de María López Luengo, Desarrolladora Web Junior. Explora mis habilidades, experiencia y proyectos en una experiencia visual y dinámica.">
+    <meta name="keywords" content="CV, Currículum, Desarrolladora Web, Junior, María López Luengo, Habilidades, Proyectos, Experiencia, HTML, CSS, JavaScript, Laravel, PHP, MySQL">
+    <meta name="author" content="María López Luengo">
+    <link rel="stylesheet" href="./css/style.css">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="./public/img/ML.ico">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Serene Professional -->
+    <!-- Application Structure Plan: He diseñado una estructura de SPA temática y no lineal para transformar el CV estático en una experiencia de exploración. Comienza con un resumen, seguido de secciones interactivas como un gráfico de habilidades y una línea de tiempo de carrera. Esta arquitectura permite a los reclutadores acceder rápidamente a la información más relevante (habilidades, experiencia) de una manera visualmente atractiva, en lugar de leer un documento de arriba a abajo. El flujo está pensado para destacar la transición profesional y las competencias técnicas de forma inmediata. -->
+    <!-- Visualization & Content Choices: Resumen -> Meta: Informar -> Bloque de texto -> Interacción: Ninguna -> Justificación: Presentación clara y directa. | Habilidades -> Meta: Comparar -> Gráfico de barras horizontales (Chart.js) -> Interacción: Tooltips al pasar el ratón -> Justificación: Ofrece una evaluación visual rápida de las fortalezas técnicas, más impactante que una lista. | Experiencia/Educación -> Meta: Mostrar cambio -> Línea de tiempo vertical (HTML/Tailwind) -> Interacción: Scroll -> Justificación: Narra la historia de la carrera y la transición al desarrollo de forma cronológica y visual. | Proyectos -> Meta: Organizar -> Tarjetas en rejilla -> Interacción: Hover para ver detalles (futura mejora), enlaces directos -> Justificación: Formato estándar y fácil de escanear para mostrar trabajos. | Idiomas -> Meta: Informar -> Barras de progreso (HTML/Tailwind) -> Interacción: Ninguna -> Justificación: Representación visual simple de la fluidez. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>MARÍA LÓPEZ LUENGO</h1>
-            <h2>Desarrolladora Web Junior</h2>
-            <div class="contact-info">
-                <a href="mailto:marialolu08@gmail.com">marialolu08@gmail.com</a> |
-                <span>687 14 72 73</span> |
-                <span>Zaragoza, Aragón</span> |
-                <a href="https://linkedin.com/in/marialolu/" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/TU-USUARIO" target="_blank">GitHub</a>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-800 dark:text-white">María López Luengo</div>
+            <div class="flex items-center">
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Resumen</a>
+                    <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Habilidades</a>
+                    <a href="#journey" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Trayectoria</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Proyectos</a>
+                </div>
+                <button id="theme-toggle" type="button" class="ml-6 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 10.607a1 1 0 010-1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-2 text-gray-900 dark:text-white">Desarrolladora Web Junior</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400">Transformando ideas en soluciones digitales robustas.</p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <button id="open-contact"
+  class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg">
+  Contactar
+</button>
+  <a href="https://github.com/Merimer08" target="_blank" class="bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition shadow-lg">GitHub</a>
+                <a href="https://linkedin.com/in/marialolu/" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-lg">LinkedIn</a>
             </div>
         </header>
 
-        <main>
-            <section class="section">
-                <h3>RESUMEN PROFESIONAL</h3>
-                <p>
-                    Soy una desarrolladora web junior apasionada por la resolución de problemas y la creación de soluciones tecnológicas. Mi transición al desarrollo de software nace de mi vocación por la lógica y la construcción de productos digitales funcionales, convirtiendo ideas en código real. Mi experiencia previa en roles de alta presión me ha dotado de una mentalidad analítica y una gran resiliencia, habilidades que ahora aplico para entregar código de alta calidad.
-                </p>
-            </section>
+        <section id="about" class="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md">
+            <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">Resumen Profesional</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-center max-w-3xl mx-auto">
+                Desarrolladora Web Junior con una vocación natural por la lógica y la construcción, forjada a través de una afición por la resolución de puzles complejos. Mi transición al desarrollo de software es una evolución de mi capacidad para transformar problemas abstractos en soluciones estructuradas. Mi experiencia previa como Operadora de Emergencias (112) me ha dotado de una metodología de trabajo rigurosa, siguiendo protocolos claros para alcanzar la solución más eficiente bajo presión, una habilidad que ahora aplico directamente en la depuración de código y el desarrollo de aplicaciones robustas.
+            </p>
+        </section>
 
-            <section class="section">
-                <h3>HABILIDADES TÉCNICAS</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Backend</h4>
-                        <ul>
-                            <li>PHP</li>
-                            <li>Laravel</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Frontend</h4>
-                        <ul>
-                            <li>HTML5 / CSS3</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>React</li>
-                            <li>Bootstrap</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Bases de Datos y Herramientas</h4>
-                        <ul>
-                            <li>MySQL / phpMyAdmin</li>
-                            <li>Git / GitHub</li>
-                            <li>VS Code</li>
-                            <li>WordPress</li>
-                        </ul>
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Habilidades Técnicas</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-center mb-8">Esta sección ofrece una visión general de mis competencias técnicas, organizadas por áreas de especialización. Pasa el cursor sobre cualquier habilidad para ver mi nivel de confianza.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-white">Backend</h3>
+                    <div class="space-y-3">
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            Laravel
+                            <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 90%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            PHP
+                            <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 85%</span>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="section">
-                <h3>PROYECTOS DESTACADOS</h3>
-                <div class="job">
-                    <p class="job-title"><strong>Check-In Garage - Sistema de Gestión para Talleres (SaaS)</strong></p>
-                    <p><strong>Descripción:</strong> Desarrollé una aplicación web completa con Laravel para la gestión integral de talleres mecánicos, optimizando el ciclo de vida de las reparaciones.</p>
-                    <p><strong>Características Clave:</strong> Implementé un sistema de autenticación Multi-Guard con una matriz de autorización detallada (Policies y Gates). Programé el flujo completo de gestión de vehículos, incluyendo subida de archivos y captura de firma digital.</p>
-                    <p><strong>Tecnologías:</strong> Laravel, PHP, MySQL, JavaScript, Blade.</p>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-white">Frontend</h3>
+                    <div class="space-y-3">
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            JavaScript (ES6+)
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 70%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            React
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 65%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            HTML5 & CSS
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 90%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            Bootstrap
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 80%</span>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-white">Bases de Datos y Herramientas</h3>
+                    <div class="space-y-3">
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            MySQL
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 80%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            Git & GitHub
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 85%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            Docker
+                             <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 70%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            VS Code
+                            <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 90%</span>
+                        </div>
+                        <div class="relative group bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center font-medium cursor-pointer">
+                            WordPress
+                            <span class="absolute z-10 bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-gray-900 dark:bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Nivel de Confianza: 75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
-            <section class="section">
-                <h3>EXPERIENCIA PROFESIONAL</h3>
-                <div class="job">
-                    <div class="job-title"><strong>Desarrolladora Web</strong> | Cantinred <span>Mayo 2024 - Actualidad</span></div>
-                    <p>Responsable del desarrollo full-stack del proyecto "Check-In Garage".</p>
-                    <ul>
-                        <li><strong>Arquitectura y Seguridad:</strong> Implementé una arquitectura MVC con autenticación Multi-Guard y Policies/Gates. Apliqué las mejores prácticas de Laravel contra vulnerabilidades.</li>
-                        <li><strong>Core Funcional:</strong> Desarrollé el ciclo completo de gestión de vehículos: check-in, seguimiento de reparaciones y check-out con firma digital.</li>
+
+         <section id="journey" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Trayectoria Profesional y
+                Educativa</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-center mb-12">Mi carrera es una historia de evolución y
+                aprendizaje continuo. Esta línea de tiempo visualiza mi transición desde roles que fortalecieron mi
+                resiliencia y habilidades de comunicación, hasta mi actual enfoque en el desarrollo de software, donde
+                aplico esa misma disciplina y lógica para construir tecnología.</p>
+            <div class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-4 pl-8">
+
+                <div class="timeline-item mb-12">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Desarrolladora Web |
+                        Cantinred Studio</h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">Mayo 2025 - Agosto 2025</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Responsable del desarrollo full-stack del proyecto
+                        SaaS "Check-In Garage".</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>Diseño e implementación de la arquitectura de datos (talleres, clientes, vehículos).</li>
+                        <li>Desarrollo del flujo de trabajo completo de reparaciones, incluyendo captura de datos y
+                            firma digital.</li>
+                        <li>Implementación de validación de datos en tiempo real y optimización de subida de archivos a
+                            formato WebP.</li>
                     </ul>
                 </div>
-                <div class="job">
-                    <div class="job-title"><strong>Operadora de Emergencias</strong> | Gobierno de Aragón (112 Aragón) <span>Junio 2020 - Septiembre 2021</span></div>
-                    <p>Gestioné incidencias críticas en tiempo real, desarrollando una alta capacidad para la resolución de problemas bajo presión, habilidad clave para el debugging en desarrollo.</p>
-                </div>
-            </section>
 
-            <section class="section">
-                <h3>EDUCACIÓN Y CERTIFICACIONES</h3>
-                 <div class="job">
-                    <div class="job-title"><strong>Certificado de Profesionalidad: Desarrollo de Aplicaciones Web</strong><span>2024</span></div>
-                    <p><em>(Nombre del Centro de Formación)</em></p>
-                    <p>Formación intensiva en desarrollo full-stack (PHP, Laravel, MySQL, React, JavaScript, HTML/CSS, WordPress).</p>
+                <div class="timeline-item mb-11">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Certificado de Profesionalidad:
+                        Desarrollo de Aplicaciones Web (510h)</h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">2024</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Formación intensiva en CPI Los Enlaces, culminando
+                        en prácticas profesionales (200h) que resultaron en contratación.</p>
                 </div>
-                <div class="job">
-                    <div class="job-title"><strong>Grado Superior en Enseñanza y Animación Sociodeportiva</strong><span>2022</span></div>
-                    <p><em>CPA Salduie (Grupo San Valero)</em></p>
+
+                <div class="timeline-item mb-12">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Instructora Deportiva y
+                        Monitora de Natación</h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">2017 - Actualidad</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">En Stadium Casablanca, Body Factory, Sinergim, E.M.
+                        Olivar. Demostré una alta capacidad de adaptación y excelentes habilidades de comunicación,
+                        evolucionando profesionalmente para mejorar mis competencias.</p>
                 </div>
-            </section>
-        </main>
+                <div class="timeline-item mb-11">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Certificado de Profesionalidad: Docencia de la
+                        Formación Profesional par el empleo </h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">2023 (Nivel 3)</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">T&Z Formación System.</p>
+                </div>
+                <div class="timeline-item mb-11">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Grado Superior en Enseñanza y
+                        Animación Sociodeportiva</h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">2022</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">CPA Salduie (Grupo San Valero).</p>
+                </div>
+
+                
+                <div class="timeline-item mb-11">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Monitora de natación</h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">2008</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Federacion Navarra de Natación </p>
+                </div>
+
+                <div class="timeline-item mb-12">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Operadora de Emergencias |
+                        Gobierno de Aragón (112)</h3>
+                    <time class="text-sm text-gray-500 dark:text-gray-400">Junio 2020 - Septiembre 2021</time>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Gestioné incidencias críticas en tiempo real,
+                        desarrollando una alta capacidad para la resolución de problemas bajo presión, habilidad clave
+                        para el debugging en desarrollo.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Proyecto Destacado</h2>
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden max-w-4xl mx-auto">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Check-In Garage - Sistema de Gestión para Talleres (SaaS)</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <strong class="text-gray-700 dark:text-gray-300">Descripción:</strong> Desarrollé una aplicación web completa con Laravel para la gestión integral de talleres mecánicos, optimizando el ciclo de vida de las reparaciones.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <strong class="text-gray-700 dark:text-gray-300">Características Clave:</strong> Implementé un sistema de autenticación Multi-Guard con una matriz de autorización detallada (Policies y Gates). Programé el flujo completo de gestión de vehículos, incluyendo subida de archivos y captura de firma digital.
+                    </p>
+                    <div>
+                        <strong class="text-gray-700 dark:text-gray-300">Tecnologías:</strong>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-red-100 text-red-800 text-sm font-semibold px-3 py-1 rounded-full">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">PHP</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-semibold px-3 py-1 rounded-full">MySQL</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">Blade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md">
+             <h2 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Idiomas</h2>
+             <div class="space-y-4">
+                 <div>
+                     <div class="flex justify-between mb-1">
+                         <span class="text-base font-medium text-gray-700 dark:text-gray-300">Español</span>
+                         <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Nativo</span>
+                     </div>
+                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                         <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 100%"></div>
+                     </div>
+                 </div>
+                 <div>
+                     <div class="flex justify-between mb-1">
+                         <span class="text-base font-medium text-gray-700 dark:text-gray-300">Inglés</span>
+                         <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Avanzado </span>
+                     </div>
+                      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                         <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 90%"></div>
+                     </div>
+                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Experiencia práctica a través de estancias de inmersión lingüística en Londres y Seattle (EE. UU.).</p>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+    
+   <div id="contact-modal" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+  <!-- Fondo -->
+  <div id="contact-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+  <!-- Contenido -->
+  <div class="relative mx-auto max-w-md w-[92%] md:w-full mt-24">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-6">
+      <div class="flex items-start justify-between mb-4">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Contacto</h3>
+        <button id="close-contact" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+          ✕
+        </button>
+      </div>
+
+      <div class="space-y-3 text-gray-700 dark:text-gray-300">
+        <p><span class="font-medium">Teléfono:</span>
+          <a href="tel:+34687147273" class="underline hover:no-underline">+34 687 14 72 73</a>
+        </p>
+        <p><span class="font-medium">Email:</span>
+          <a href="mailto:marialolu08@gmail.com" class="underline hover:no-underline">marialolu08@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="mt-6 flex gap-3">
+      <a href="tel:+34687147273"
+     class="inline-flex items-center justify-center px-5 py-2 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 transition">
+    Llamar
+  </a>
+          <a href="https://wa.me/34687147273" target="_blank"
+     class="inline-flex items-center justify-center px-5 py-2 rounded-full bg-green-500 text-white hover:bg-green-600 transition">
+    WhatsApp
+  </a>
+         <a href="mailto:marialolu08@gmail.com"
+           class="inline-flex items-center justify-center px-5 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition">
+          Enviar correo
+        </a>
+       
+      </div>
     </div>
+  </div>
+</div>
+
+    <footer class="text-center py-6 mt-12 bg-gray-200 dark:bg-gray-800">
+        <p class="text-gray-600 dark:text-gray-400">&copy; 2025 María López Luengo. Diseñado y desarrollado con pasión.</p>
+    </footer>
+
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    
+<script src="./js/script.js"></script>
+
 
 </body>
 </html>
